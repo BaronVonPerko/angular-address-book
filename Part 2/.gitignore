@@ -4,6 +4,9 @@
 /dist
 /tmp
 
+# Secret Config Data
+firebase-config.ts
+
 # dependencies
 /node_modules
 

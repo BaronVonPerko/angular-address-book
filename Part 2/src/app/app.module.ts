@@ -7,6 +7,7 @@ import { FirebaseConfig } from './firebase-config';
 
 import { AppComponent } from './app.component';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+import { AuthenticationComponent } from './components/authentication/authentication.component';
 
 const myFirebaseAuthConfig = {
   provider: AuthProviders.Password,
@@ -15,7 +16,8 @@ const myFirebaseAuthConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,

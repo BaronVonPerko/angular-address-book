@@ -10,10 +10,12 @@ export class AuthenticationComponent implements OnInit {
 
   email: String;
   password: String;
+  user: any;
 
   constructor(public angularFire: AngularFire) { }
 
   ngOnInit() {
+    this.angularFire.auth.subscribe(auth => this.user = auth);
   }
 
   register() {

@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
 
+import { UserService } from './services/user.service';
+
 const myFirebaseAuthConfig = {
   provider: AuthProviders.Password,
   method: AuthMethods.Password
@@ -25,7 +27,9 @@ const myFirebaseAuthConfig = {
     HttpModule,
     AngularFireModule.initializeApp(FirebaseConfig.myFirebaseConfig, myFirebaseAuthConfig)
   ],
-  providers: [],
+  providers: [
+    UserService,
+  ],
   bootstrap: [AppComponent]
 })
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFire } from 'angularfire2';
+import { UserService } from './../../services/user.service';
 
 @Component({
   selector: 'authentication',
@@ -12,17 +12,12 @@ export class AuthenticationComponent implements OnInit {
   password: String;
   user: any;
 
-  constructor(public angularFire: AngularFire) { }
+  constructor(public userService: UserService ) { }
 
-  ngOnInit() {
-    this.angularFire.auth.subscribe(auth => this.user = auth);
-  }
+  ngOnInit() {  }
 
   register() {
-    this.angularFire.auth.createUser({
-      email: this.email.toString(),
-      password: this.password.toString()
-    });
+    this.userService.register(this.email.toString(), this.password.toString());
   }
 
 }

@@ -10,6 +10,7 @@ import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
 
 import { UserService } from './services/user.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 const myFirebaseAuthConfig = {
   provider: AuthProviders.Password,
@@ -19,7 +20,8 @@ const myFirebaseAuthConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

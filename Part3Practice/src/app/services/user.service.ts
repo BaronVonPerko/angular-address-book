@@ -11,11 +11,38 @@ export class UserService {
     this.angularFire.auth.subscribe(auth => this.user = auth);
   }
 
-  register(email, password) {
-    this.angularFire.auth.createUser({
-      email,
-      password
+  register(email, password): Promise<any> {
+    var promise = new Promise((res, rej) => {
+      this.angularFire.auth.createUser({
+        email,
+        password
+      })
+      .then(_ => {
+        res();
+      })
+      .catch((err) => {
+        res(err);
+      })
     });
+
+    return promise;
+  }
+
+  login(email, password): Promise<any> {
+    var promise = new Promise((res, rej) => {
+      this.angularFire.auth.login({
+        email,
+        password
+      })
+      .then(_ => {
+        res();
+      })
+      .catch((err) => {
+        res(err);
+      })
+    });
+
+    return promise;
   }
 
   logout() {

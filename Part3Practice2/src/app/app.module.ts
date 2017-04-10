@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 const myFirebaseAuthConfig = {
   provider: AuthProviders.Password,
   method: AuthMethods.Password

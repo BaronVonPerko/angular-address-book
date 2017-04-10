@@ -11,6 +11,8 @@ import { AuthenticationComponent } from './components/authentication/authenticat
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MdToolbarModule } from '@angular/material';
+
 const myFirebaseAuthConfig = {
   provider: AuthProviders.Password,
   method: AuthMethods.Password
@@ -25,7 +27,9 @@ const myFirebaseAuthConfig = {
     BrowserModule,
     FormsModule,
     HttpModule,
-    AngularFireModule.initializeApp(FirebaseConfig.myFirebaseConfig, myFirebaseAuthConfig)
+    AngularFireModule.initializeApp(FirebaseConfig.myFirebaseConfig, myFirebaseAuthConfig),
+    BrowserAnimationsModule,
+    MdToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

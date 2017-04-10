@@ -1,4 +1,4 @@
-<div class="form form-authentication" *ngIf="user === null">
+<!--<div class="form form-authentication" *ngIf="user === null">
   <div class="form-group">
     <label for="inputEmail">Email: </label>
     <input id="inputEmail" type="email" [(ngModel)]="email" />
@@ -10,4 +10,13 @@
   </div>
 
   <button (click)="register()">Register</button>
-</div>
+</div>-->
+
+<md-tab-group>
+  <md-tab label="Register">
+    <register-form></register-form>
+  </md-tab>
+  <md-tab label="Login">
+    <login-form></login-form>
+  </md-tab>
+</md-tab-group>

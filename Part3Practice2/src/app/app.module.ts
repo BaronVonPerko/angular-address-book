@@ -11,7 +11,9 @@ import { AuthenticationComponent } from './components/authentication/authenticat
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MdToolbarModule } from '@angular/material';
+import { MdButtonModule, MdInputModule, MdTabsModule, MdToolbarModule } from '@angular/material';
+import { RegisterComponent } from './components/authentication/register/register.component';
+import { LoginComponent } from './components/authentication/login/login.component';
 
 const myFirebaseAuthConfig = {
   provider: AuthProviders.Password,
@@ -21,14 +23,19 @@ const myFirebaseAuthConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(FirebaseConfig.myFirebaseConfig, myFirebaseAuthConfig),
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     HttpModule,
-    AngularFireModule.initializeApp(FirebaseConfig.myFirebaseConfig, myFirebaseAuthConfig),
-    BrowserAnimationsModule,
+    MdButtonModule,
+    MdInputModule,
+    MdTabsModule,
     MdToolbarModule
   ],
   providers: [],

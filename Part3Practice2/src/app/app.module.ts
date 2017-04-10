@@ -11,7 +11,7 @@ import { AuthenticationComponent } from './components/authentication/authenticat
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MdButtonModule, MdInputModule, MdTabsModule, MdToolbarModule } from '@angular/material';
+import { MdButtonModule, MdCardModule, MdInputModule, MdTabsModule, MdToolbarModule } from '@angular/material';
 import { RegisterComponent } from './components/authentication/register/register.component';
 import { LoginComponent } from './components/authentication/login/login.component';
 
@@ -34,6 +34,7 @@ const myFirebaseAuthConfig = {
     FormsModule,
     HttpModule,
     MdButtonModule,
+    MdCardModule,
     MdInputModule,
     MdTabsModule,
     MdToolbarModule

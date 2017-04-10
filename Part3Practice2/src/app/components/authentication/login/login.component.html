@@ -1,13 +1,16 @@
 <md-input-container>
   <input mdInput placeholder="Email" [(ngModel)]="email">
 </md-input-container>
+<br>
 
 <md-input-container>
   <input mdInput placeholder="Password" type="password" [(ngModel)]="password">
 </md-input-container>
+<br>
 
 <button md-raised-button color="primary" (click)="login()">
   Login
 </button>
+<br>
 
 <span>{{error}}</span>

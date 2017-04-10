@@ -2,5 +2,11 @@
   <h2>
     Angular Address Book
   </h2>
+  <span class="filler"></span>
+  <button md-button 
+    *ngIf="userService.user"
+    (click)="userService.logout()">
+    Logout
+  </button>
 </md-toolbar>
 <authentication></authentication>

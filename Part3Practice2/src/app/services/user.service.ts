@@ -4,7 +4,11 @@ import { AngularFire } from 'angularfire2';
 @Injectable()
 export class UserService {
 
-  constructor(private angularFire: AngularFire) { }
+  public user: any;
+
+  constructor(private angularFire: AngularFire) {
+    this.angularFire.auth.subscribe(auth => this.user = auth);
+  }
 
   register(email, password): Promise<any> {
     var promise = new Promise((res, rej) => {

@@ -39,7 +39,7 @@ export class RegisterComponent implements OnInit {
     }
 
     this.userService.register(this.email, this.password).then(res => {
-      if(res.message) { this.error = res.message; }
+      if(res && res.message) this.error = res.message;
     });
   }
 

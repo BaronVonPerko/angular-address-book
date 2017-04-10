@@ -1,3 +1,13 @@
-<p>
-  login works!
-</p>
+<md-input-container>
+  <input mdInput placeholder="Email" [(ngModel)]="email">
+</md-input-container>
+
+<md-input-container>
+  <input mdInput placeholder="Password" type="password" [(ngModel)]="password">
+</md-input-container>
+
+<button md-raised-button color="primary" (click)="login()">
+  Login
+</button>
+
+<span>{{error}}</span>

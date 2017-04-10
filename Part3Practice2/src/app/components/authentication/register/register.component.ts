@@ -12,6 +12,7 @@ import { UserService } from './../../../services/user.service';
 export class RegisterComponent implements OnInit {
   email: String;
   password: String;
+  confirmPassword: String;
   error: String;
 
   constructor(private userService: UserService) { }
@@ -29,6 +30,11 @@ export class RegisterComponent implements OnInit {
 
     if(!this.password) {
       this.error = 'Please enter a password.';
+      return;
+    }
+
+    if(this.password !== this.confirmPassword) {
+      this.error = 'Passwords do not match.';
       return;
     }
 

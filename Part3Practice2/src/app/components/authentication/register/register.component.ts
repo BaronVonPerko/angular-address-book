@@ -4,10 +4,7 @@ import { UserService } from './../../../services/user.service';
 @Component({
   selector: 'register-form',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss'],
-  providers: [
-    UserService
-  ]
+  styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
   email: String;

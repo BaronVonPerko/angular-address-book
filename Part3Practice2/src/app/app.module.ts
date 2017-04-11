@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
 
+import { UserService } from "./services/user.service";
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MdButtonModule, MdCardModule, MdInputModule, MdTabsModule, MdToolbarModule } from '@angular/material';
@@ -39,7 +41,7 @@ const myFirebaseAuthConfig = {
     MdTabsModule,
     MdToolbarModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 

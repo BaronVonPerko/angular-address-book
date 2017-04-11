@@ -12,17 +12,8 @@ export class AuthenticationComponent implements OnInit {
   password: String;
   user: any;
 
-  constructor(public angularFire: AngularFire) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.angularFire.auth.subscribe(auth => this.user = auth);
-  }
-
-  register() {
-    this.angularFire.auth.createUser({
-      email: this.email.toString(),
-      password: this.password.toString()
-    });
-  }
+  ngOnInit() {  }
 
 }
